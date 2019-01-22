@@ -52,3 +52,13 @@ app.post("/customers", (req, res) => {
     res.send("Success");
   });
 });
+
+// app.get("/customers", (req, res) => {
+//     Customers.find().then(customers => {
+//         if(customers === null) {
+//         return res.send("Failed!")
+//     }})
+//     res.send({
+//         data: customers
+//   } )
+//  })
