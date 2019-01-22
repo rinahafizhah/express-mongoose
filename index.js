@@ -45,3 +45,10 @@ const Customers = mongoose.model(
     }
   )
 );
+
+app.post("/customers", (req, res) => {
+  Customers.create(req.body, (err, customer) => {
+    if (err) return res.send("Failed");
+    res.send("Success");
+  });
+});
